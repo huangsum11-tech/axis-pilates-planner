@@ -3,16 +3,16 @@ import { ChevronDown, ChevronUp, Copy, Check, AlertTriangle, Save, Trash2, Loade
 
 /* ============================== DESIGN TOKENS ============================== */
 const C = {
-  // Plumbline 配色：深雲杉綠（軸線）＋銅色（鉛錘）＋暖紙色
-  bg: '#F2EEE7', surface: '#FFFDF9', surface2: '#F7F3EC',
-  ink: '#1C2B2E', inkSoft: '#4D5A5C', inkFaint: '#879091',
-  pine: '#1F4E4A', pineSoft: '#3E6B66',
-  brass: '#B4673A', brassSoft: '#F2DCCB', brassDeep: '#8A4A24',
+  // Axis 軸心配色：午夜藍（中軸）＋珊瑚（強調）＋霧藍＋砂＋骨白
+  bg: '#F4F1EA', surface: '#FFFDF9', surface2: '#F8F5EE',
+  ink: '#1B2233', inkSoft: '#4B5263', inkFaint: '#868B97',
+  pine: '#1E2A44', pineSoft: '#3A4A6B',
+  brass: '#E07A5F', brassSoft: '#F8DDD3', brassDeep: '#B5533A',
   rose: '#B0585E', roseSoft: '#F5DEDF',
   sage: '#5F7F63', sageSoft: '#DCE8DA',
-  slate: '#4A6687', slateSoft: '#DEE6F0',
-  brown: '#7D6553', brownSoft: '#EDE3DA',
-  line: '#E3DBCE', lineSoft: '#EEE8DE',
+  slate: '#5E7BA3', slateSoft: '#E1E8F2',
+  brown: '#8F7B5E', brownSoft: '#EEE6D9',
+  line: '#E4DDD0', lineSoft: '#EEE9DF',
 };
 const FONT_DISPLAY = "'Archivo','PingFang TC','Noto Sans TC',sans-serif";
 const FONT_BODY = "'IBM Plex Sans','PingFang TC','Noto Sans TC',sans-serif";
@@ -1838,7 +1838,7 @@ function PrintableDocument({ doc }) {
               {splitSteps(e.instructions).map((s, k) => <div key={k} style={{ fontSize: 11, marginLeft: 14, color: '#222' }}>{s}</div>)}
               {e.benefits && <div style={{ fontSize: 10.5, marginLeft: 14, color: '#2f6b45', marginTop: 2 }}>好處：{e.benefits}</div>}
               {e.mistakes && <div style={{ fontSize: 10.5, marginLeft: 14, color: '#a5473c' }}>常見錯誤：{e.mistakes}</div>}
-              {sec.reasons && sec.reasons[j] && <div style={{ fontSize: 10.5, marginLeft: 14, color: '#1F4E4A', marginTop: 2 }}>選擇原因：{sec.reasons[j]}</div>}
+              {sec.reasons && sec.reasons[j] && <div style={{ fontSize: 10.5, marginLeft: 14, color: '#1E2A44', marginTop: 2 }}>選擇原因：{sec.reasons[j]}</div>}
             </div>
           ))}
         </div>
@@ -2926,7 +2926,7 @@ function ReasonBox({ pick }) {
     </div>
   );
 }
-const KIND_COLOR = { L: '#5F7F63', M: '#4A6687', S: '#B4673A', C: '#1F4E4A' };
+const KIND_COLOR = { L: '#5F7F63', M: '#5E7BA3', S: '#C9654A', C: '#1E2A44' };
 
 function RootCauseCards({ roots }) {
   if (!roots || !roots.length) return null;
@@ -3266,14 +3266,16 @@ const TABS = [
   { key: 'saved', short: '收藏', label: '我的收藏', en: 'Saved', icon: '♡' },
 ];
 
-/* Plumbline 標誌：鉛垂線＋銅色鉛錘＋環繞軸線的脊柱曲線 */
+/* Axis 軸心標誌：一條中軸＋四節椎骨（最下一節為珊瑚色的骨盆／核心），代表 Polestar 的中軸延伸 */
 function BrandMark({ size = 44 }) {
   return (
     <svg viewBox="0 0 48 48" width={size} height={size} aria-hidden="true">
       <rect x="1" y="1" width="46" height="46" rx="14" fill={C.pine} />
-      <line x1="24" y1="7" x2="24" y2="31" stroke={C.brassSoft} strokeWidth="1.6" strokeLinecap="round" />
-      <path d="M28.5 9.5 C 18 13, 30 19, 19.5 23.5 C 15.5 25.2, 18.5 28.6, 22.4 29.6" fill="none" stroke={C.surface} strokeWidth="2.4" strokeLinecap="round" />
-      <path d="M24 31 C 20.6 34.2, 20.6 37.4, 24 40.8 C 27.4 37.4, 27.4 34.2, 24 31 Z" fill={C.brass} />
+      <line x1="24" y1="7" x2="24" y2="41" stroke="#8FA8C8" strokeWidth="1.6" strokeLinecap="round" />
+      <circle cx="24" cy="12.5" r="3" fill={C.bg} />
+      <circle cx="24" cy="20.5" r="3" fill={C.bg} />
+      <circle cx="24" cy="28.5" r="3" fill={C.bg} />
+      <circle cx="24" cy="36.5" r="3.4" fill={C.brass} />
     </svg>
   );
 }
@@ -3382,7 +3384,7 @@ export default function App() {
           <div className="pl-brand">
             <BrandMark />
             <div>
-              <div className="pl-brand-name">Plumbline<br /><span style={{ fontSize: 15, fontWeight: 800, color: C.brassDeep }}>鉛垂線</span></div>
+              <div className="pl-brand-name">Axis<br /><span style={{ fontSize: 15, fontWeight: 800, color: C.brassDeep }}>軸心</span></div>
               <div className="pl-brand-sub">Pilates Planner</div>
             </div>
           </div>
@@ -3409,7 +3411,7 @@ export default function App() {
 
         <footer style={{ marginTop: 50, paddingTop: 18, borderTop: `1px solid ${C.line}` }}>
           <p style={{ fontSize: 11.5, color: C.inkFaint, lineHeight: 1.6 }}>
-            本工具內容為普拉提專業教學參考架構，動作編排邏輯僅供導師備課使用，並非醫療建議；如客人有持續或劇烈痛症，請先轉介專業醫療人員評估。儲存功能只會將資料存放在此裝置的瀏覽器內，不會與其他人分享。Plumbline 鉛垂線 · 動作與評估內容整理自 STOTT PILATES® 與 Polestar Pilates 課程筆記。
+            本工具內容為普拉提專業教學參考架構，動作編排邏輯僅供導師備課使用，並非醫療建議；如客人有持續或劇烈痛症，請先轉介專業醫療人員評估。儲存功能只會將資料存放在此裝置的瀏覽器內，不會與其他人分享。Axis 軸心 · 動作與評估內容整理自 STOTT PILATES® 與 Polestar Pilates 課程筆記。
           </p>
         </footer>
         </div>

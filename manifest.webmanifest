@@ -1,14 +1,14 @@
 {
-  "name": "Plumbline 鉛垂線｜普拉提規劃台",
-  "short_name": "Plumbline",
+  "name": "Axis 軸心｜普拉提規劃台",
+  "short_name": "Axis 軸心",
   "description": "從評估、根因到課堂的普拉提規劃台（STOTT／Polestar）",
   "lang": "zh-Hant",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#F2EEE7",
-  "theme_color": "#1F4E4A",
+  "background_color": "#F4F1EA",
+  "theme_color": "#1E2A44",
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }

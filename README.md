@@ -1,8 +1,8 @@
-# Plumbline 鉛垂線｜普拉提規劃台
+# Axis 軸心｜普拉提規劃台
 
 從評估、根因到課堂。依據 STOTT PILATES® 與 Polestar Pilates 課程筆記整理。
 
-**線上版（手機／iPad）：** https://huangsum11-tech.github.io/plumbline-pilates-planner/
+**線上版（手機／iPad）：** https://huangsum11-tech.github.io/axis-pilates-planner/
 
 **安裝到手機或 iPad：**
 - iPhone／iPad（Safari）：打開上面連結 → 分享按鈕 → 「加入主畫面」。之後會像 App 一樣全螢幕開啟，首次開啟後可離線使用。
@@ -36,9 +36,9 @@ cd ~/Documents/Claude/Pilates/Planner && node build/build.mjs
 
 ## 品牌
 
-- 名稱：**Plumbline 鉛垂線**——STOTT 與 Polestar 的體態評估都以鉛垂線為基準，這個工具的工作就是把身體帶回那條線。
-- 標誌：深雲杉綠方塊中的鉛垂線、銅色鉛錘，以及環繞軸線的脊柱 S 曲線。
-- 配色：雲杉綠 `#1F4E4A`（軸線／主色）、銅 `#B4673A`（鉛錘／強調）、暖紙 `#F2EEE7`（底色）、鼠尾草綠 `#5F7F63`（拉長）、石板藍 `#4A6687`（活動度）、玫瑰 `#B0585E`（警示）。
+- 名稱：**Axis 軸心**——取自 Polestar「中軸延伸與核心控制」原則：所有動作從身體的中軸延伸、由核心穩定。
+- 標誌：午夜藍方塊中的一條中軸與四節椎骨，最下一節以珊瑚色代表骨盆與核心。
+- 配色：午夜藍 `#1E2A44`（主色）、珊瑚 `#E07A5F`（強調）、霧藍 `#8FA8C8`、砂 `#C9B79C`、骨白 `#F4F1EA`（底色）；功能色：鼠尾草綠 `#5F7F63`（拉長）、石板藍 `#5E7BA3`（活動度）、玫瑰 `#B0585E`（警示）。
 
 ## 更新線上版
 
