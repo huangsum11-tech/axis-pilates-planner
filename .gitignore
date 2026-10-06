@@ -1,0 +1,6 @@
+# 筆記原文（STOTT／Polestar 手冊 OCR 與抽取資料）屬版權材料，只保留在本機
+notes-ocr/
+docs/*.json
+archive/
+build/node_modules/
+.DS_Store
